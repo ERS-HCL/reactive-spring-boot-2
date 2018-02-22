@@ -1,0 +1,19 @@
+server:
+  port: 8080
+spring:
+  data:
+    cassandra:
+        keyspace-name: sales_cloud_data
+        contact-points: localhost
+        schema-action: NONE
+  management:
+    security:
+      roles: SUPERUSER
+  security:
+    user:
+      name: admin
+      password: secret
+      role: USER
+logging:
+    level:
+      org.springframework.web: DEBUG
