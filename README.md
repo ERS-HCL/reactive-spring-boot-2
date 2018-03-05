@@ -58,3 +58,7 @@ endDate text)
 
 
 3. INSERT INTO sales_cloud_data.cloud_key_value_data(id,category,subcategory,keyname,valuetype,keyvalue) VALUES ('1234','payment','payment','key1','boolean','true');
+
+
+# Micrometer- Metrics
+![Atlas-Metrics](https://github.com/ERS-HCL/reactive-spring-boot-2/blob/master/docs/metrics-graph.png?raw=true)
