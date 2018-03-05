@@ -1,0 +1,43 @@
+---
+logging:
+  level:
+    org.springframework.boot: INFO
+server:
+  port: 8282
+spring:
+  data:
+    cassandra:
+      contact-points: localhost
+      keyspace-name: sales_cloud_data
+      schema-action: NONE
+  management:
+    security:
+      enabled: false
+      roles: SUPERUSER
+  security:
+    user:
+      name: admin
+      password: secret
+      role: USER
+
+management.endpoints.web.exposure.include : health,info,threaddump,metrics,loggers,httptrace,heapdump,auditevents
+management.metrics.export.atlas.uri: http://localhost:7101/api/v1/publish
+management.metrics.export.atlas.enabled: true # default is true
+management.metrics.use-global-registry:  true
+spring.resources.cache.period: 10
+endpoints.auditevents.enabled: true
+endpoints.autoconfig.enabled: true
+endpoints.beans.enabled: true
+endpoints.configprops.enabled: true
+endpoints.env.enabled: true
+endpoints.health.enabled: true
+endpoints.info.enabled: true
+endpoints.loggers.enabled: true
+endpoints.metrics.enabled: true
+endpoints.mappings.enabled: true
+endpoints.status.enabled: true
+endpoints.threaddump.enabled: true
+endpoints.trace.enabled: true
+endpoints.logfile.enabled: true
+spring.metrics.binders.jvmthreads.enabled: true
+spring.metrics.binders.jvmgc.enabled: true
